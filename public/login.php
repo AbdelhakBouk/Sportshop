@@ -31,10 +31,13 @@ if(isset($_POST) && !empty($_POST)) {
       $database->session_inlog($email);
     
 
-      echo '<script>alert("Je bent ingelogd!")</script>';
+      // echo '<script>alert("Je bent ingelogd!")</script>';
 
-      echo "<script> windows.location = 'http://localhost/Projecten/Supermarket/public/account.php' ";
+      // echo "<script> windows.location = 'http://localhost/Projecten/Supermarket/public/account.php' ";
 
+
+      
+     echo "<script>window.location.href = 'index.php'</script>";
 
 
     }

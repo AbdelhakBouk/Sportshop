@@ -40,7 +40,6 @@ body {
   background-size: cover;
 }
 
-
 </style>
  
 <body>

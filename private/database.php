@@ -48,6 +48,17 @@
          return $res;
      }
 
+     // functie voor het lezen van de producten in de database en die te weergeven.
+
+     public function read_products($categorie){
+
+        $sql = "SELECT * FROM product WHERE Categorie = ". "'". $categorie. "'";
+        $res = mysqli_query($this->connection, $sql);
+        return $res;
+
+     }
+
+
      // functie voor het aanmaken van een gebruiker.
 
      public function create_user($id, $voornaam, $achternaam, $telefoonnummer, $geslacht, $geboortedatum, $email, $postcode, $straatnaam, $huisnummer, $stad, $wachtwoord,$token){

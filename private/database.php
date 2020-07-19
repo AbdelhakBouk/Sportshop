@@ -54,9 +54,35 @@
 
         $sql = "SELECT * FROM product WHERE Categorie = ". "'". $categorie. "'";
         $res = mysqli_query($this->connection, $sql);
-        return $res;
+       
+       
+        
 
-     }
+         // check of er data in de database zit.
+
+        if(mysqli_num_rows($res) > 0){
+                    
+            $result = true;
+
+          
+            return $res;
+            return $result;
+
+        } else {
+            
+            $result = false;
+
+            echo "<script>window.location.href = 'error.php?categorie=<b>". $categorie. "</b>'</script>";
+
+            return $categorie;
+            return $result;
+
+        }    
+
+
+    }
+
+    
 
 
      // functie voor het aanmaken van een gebruiker.

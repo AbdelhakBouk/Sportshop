@@ -150,6 +150,9 @@ img {
             <div class="row">
 
             <?php 
+            if($database->read_products($categorie) == true)
+            {
+
             while($product = mysqli_fetch_assoc($result)){
             ?>
 
@@ -171,7 +174,11 @@ img {
                     </div>
                 </div>
 
-            <?php } ?>               
+            <?php } } elseif($database->read_products($categorie) == false) {
+
+                echo "<script>window.location.href = 'error.php'</script>";
+                
+            } ?>               
                        
             </div>
         </div>
